@@ -45,16 +45,16 @@ neighbour = 0
 
 for row in range(len(pixels) - 1):
     for column in range(len(pixels[0]) - 1):
-        if column != 0 and abs(pixels[row][column - 1] - pixels[row][column]) > 128:
+        if column > 0 and abs(pixels[row][column - 1] - pixels[row][column]) > 128:
             neighbour += 1
             continue
-        if column != len(pixels[0]) - 1 and abs(pixels[row][column + 1] - pixels[row][column]) > 128:
+        if column < len(pixels[0]) and abs(pixels[row][column + 1] - pixels[row][column]) > 128:
             neighbour += 1
             continue
-        if row != 0 and abs(pixels[row - 1][column] - pixels[row][column]) > 128:
+        if row > 0 and abs(pixels[row - 1][column] - pixels[row][column]) > 128:
             neighbour += 1
             continue
-        if row != len(pixels) - 1 and abs(pixels[row + 1][column] - pixels[row][column]) > 128:
+        if row < len(pixels) and abs(pixels[row + 1][column] - pixels[row][column]) > 128:
             neighbour += 1
 
 print("6.3\nneighbouring pixels: {}".format(neighbour))
