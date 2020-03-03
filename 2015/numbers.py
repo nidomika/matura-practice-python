@@ -2,13 +2,6 @@ file = open("liczby.txt")
 numbers = file.read().split()
 file = file.close
 
-numbersInt10 = []
-
-for number in numbers:
-    number = int(number, 2)
-    numbersInt10.append(number)
-
-
 # 1. more 0s than 1s
 
 counterAll = 0
