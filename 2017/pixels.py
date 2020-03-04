@@ -41,23 +41,21 @@ print("6.2\nfor removal: {}".format(counter))
 # 6.3 find contrasting neighbouring pixels in rows/columns
 
 neighbourCounter = 0
-neighbour = 0
 
-for row in range(len(pixels) - 1):
-    for column in range(len(pixels[0]) - 1):
-        if column > 0 and abs(pixels[row][column - 1] - pixels[row][column]) > 128:
-            neighbour += 1
-            continue
-        if column < len(pixels[0]) and abs(pixels[row][column + 1] - pixels[row][column]) > 128:
-            neighbour += 1
-            continue
-        if row > 0 and abs(pixels[row - 1][column] - pixels[row][column]) > 128:
-            neighbour += 1
-            continue
-        if row < len(pixels) and abs(pixels[row + 1][column] - pixels[row][column]) > 128:
-            neighbour += 1
+for row in range(len(pixels)):
+    for column in range(len(pixels[0])):
+        neighbour = 0
+        if column != 0 and abs(pixels[row][column - 1] - pixels[row][column]) > 128:
+            neighbour = 1
+        if column < len(pixels[0]) - 1 and abs(pixels[row][column + 1] - pixels[row][column]) > 128:
+            neighbour = 1
+        if row != 0 and abs(pixels[row - 1][column] - pixels[row][column]) > 128:
+            neighbour = 1
+        if row < len(pixels) - 1 and abs(pixels[row + 1][column] - pixels[row][column]) > 128:
+            neighbour = 1
+        neighbourCounter += neighbour
 
-print("6.3\nneighbouring pixels: {}".format(neighbour))
+print("6.3\nneighbouring pixels: {}".format(neighbourCounter))
 
 # 6.4 longest column of same colour pixels
 
@@ -73,4 +71,4 @@ for row in range(len(pixels) - 2):
         if smolLine > 1:
             smolLineList.append(smolLine)
 
-print(max(smolLineList))
+print("6.4\nlongest line: {}".format(max(smolLineList)))
