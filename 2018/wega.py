@@ -1,5 +1,5 @@
-file = open("przyklad.txt")
-# file = open("sygnaly.txt")
+# file = open("przyklad.txt")
+file = open("sygnaly.txt")
 signals = file.read().split()
 file.close()
 
@@ -30,11 +30,13 @@ for word in signals:
     wordCountList.append(smolLetterCount)
 
 # xddddddddddddddddddddddddd
-print("6.2\nmost unique letters: {} {}".format(wordList[wordCountList.index(max(wordCountList))], max(wordCountList)))
+print("4.2\nmost unique letters: {} {}".format(wordList[wordCountList.index(max(wordCountList))], max(wordCountList)))
 # xddddddddddddddddddddddddd
 
 # 4.3 difference between every letter is <= 10
 # so basically biggest ascii - smallest ascii <= 10
+
+print("4.3\nlines where difference is <=10: ")
 
 for word in signals:
     maximum = word[0]
@@ -46,3 +48,4 @@ for word in signals:
             minimum = letter
     if ord(maximum) - ord(minimum) <= 10:
         print(word)
+
