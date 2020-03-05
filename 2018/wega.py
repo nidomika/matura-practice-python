@@ -33,9 +33,16 @@ for word in signals:
 print("6.2\nmost unique letters: {} {}".format(wordList[wordCountList.index(max(wordCountList))], max(wordCountList)))
 # xddddddddddddddddddddddddd
 
-# 4.3 difference between every letter is < 10
+# 4.3 difference between every letter is <= 10
+# so basically biggest ascii - smallest ascii <= 10
 
 for word in signals:
+    maximum = word[0]
+    minimum = word[0]
     for letter in word:
-        pass
-
+        if ord(letter) > ord(maximum):
+            maximum = letter
+        if ord(letter) < ord(minimum):
+            minimum = letter
+    if ord(maximum) - ord(minimum) <= 10:
+        print(word)
