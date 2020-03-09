@@ -1,0 +1,16 @@
+ROBOT (próbna 2019 Uniw.Toruń)
+
+Gra 'Podróżujący robot' polega na poruszaniu robotem po planszy w celu zebrania jak największej liczby punktów. Plansza jest kwadratem o boku długości n=20 kwadratowych pól. W każdym polu planszy jest wpisana liczba punktów, o którą za każdym razem wzrasta wynik gracza, gdy umieści on robota na tym polu - dotyczy to również pola startowego, którym dla każdego gracza jest pole w lewym górnym narożniku planszy. Liczba punktów w każdym polu jest cyfrą o wartości od 0 do 9.
+Każdy gracz w swojej turze wykonuje nie więcej niż 5*n ruchów robotem. Pojedynczy ruch gracza przemieszcza robota dokładnie o jedno pole, w jednym z czterech kierunków świata: N – na północ (do góry), E – na wschód (na prawo), S – na południe (na dół), W – na zachód (w lewo). Jeśli gracz przemieści robota swoim ruchem poza planszę, jest zdyskwalifikowany, a jego wynik jest wtedy równy –1 punktów.
+Plansza do gry umieszczona jest w pliku plansza.txt. Dane w każdym wierszu oddzielone są pojedynczą spacją.
+W pliku robot.txt, w każdym z kolejnych i wierszy, gdzie 1 ≤ i ≤ 1000, są zapisane kolejne ruchy, które wykonał w trakcie gry i-ty gracz.
+Napisz program (...)
+
+Zadanie 4.1 (0–4)
+Ilu graczy zostało zdyskwalifikowanych?
+
+Zadanie 4.2 (0–4)
+Jaki jest numer gracza, który otrzymał najwyższą liczbę punktów? Jest tylko jeden taki gracz. Podaj uzyskaną przez tego gracza liczbę punktów.
+
+Zadanie 4.3 (0–5)
+Gracze często wielokrotnie wykonywali następujące bezpośrednio po sobie pojedyncze ruchy w jednym wierszu planszy, to znaczy w lewo (W) lub w prawo (E). Podaj numery wszystkich graczy, którzy wykonali największą liczbę następujących bezpośrednio po sobie pojedynczych ruchów w jednym wierszu planszy oraz podaj liczbę tych ruchów.
