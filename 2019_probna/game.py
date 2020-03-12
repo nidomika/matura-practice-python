@@ -56,7 +56,7 @@ for player in players:
 
 print("4.2\nindex with highest score: {}\nscore: {}".format(scoreBoard.index(max(scoreBoard)) + 1, max(scoreBoard)))
 
-# 4.3 highest amount of moves in the one row (W or E)
+# 4.3 most moves in one row (W or E)
 
 longestMove = 0
 
